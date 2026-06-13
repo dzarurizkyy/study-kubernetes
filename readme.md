@@ -13,6 +13,7 @@ This repository contains a comprehensive reference guide for Kubernetes concepts
 ## List of Material 📚
 
 * 📘 **Architecture**
+  
   Covers the Kubernetes cluster architecture including Master components and Worker Node components:
   ```
   Master  → kube-apiserver, etcd, kube-scheduler, kube-controller-manager
@@ -20,6 +21,7 @@ This repository contains a comprehensive reference guide for Kubernetes concepts
   ```
 
 * 📗 **Pod**
+  
   The smallest deployable unit in Kubernetes — contains one or more containers that share the same network and storage:
   ```yaml
   apiVersion: v1
@@ -35,6 +37,7 @@ This repository contains a comprehensive reference guide for Kubernetes concepts
   ```
 
 * 📗 **Labels & Annotations**
+  
   Labels are used to tag and filter resources. Annotations store supplemental metadata:
   ```bash
   # Add a label
@@ -46,6 +49,7 @@ This repository contains a comprehensive reference guide for Kubernetes concepts
   ```
 
 * 📗 **Namespace**
+  
   Logical separator for organizing resources across teams or environments:
   ```bash
   kubectl get namespaces
@@ -54,6 +58,7 @@ This repository contains a comprehensive reference guide for Kubernetes concepts
   ```
 
 * 📘 **Probe**
+  
   Health checks that Kubernetes runs against containers to determine liveness and readiness:
   ```yaml
   livenessProbe:
@@ -71,6 +76,7 @@ This repository contains a comprehensive reference guide for Kubernetes concepts
   ```
 
 * 📗 **Replica Set**
+  
   Ensures a specified number of Pod replicas are always running. Replacement for the deprecated Replication Controller:
   ```yaml
   apiVersion: apps/v1
@@ -93,6 +99,7 @@ This repository contains a comprehensive reference guide for Kubernetes concepts
   ```
 
 * 📗 **Daemon Set**
+  
   Runs exactly one Pod on every Node in the cluster — ideal for monitoring agents and log collectors:
   ```bash
   kubectl get daemonsets
@@ -100,6 +107,7 @@ This repository contains a comprehensive reference guide for Kubernetes concepts
   ```
 
 * 📗 **Job & Cron Job**
+  
   Job runs a task once to completion. CronJob schedules Jobs on a recurring basis using cron expressions:
   ```yaml
   # CronJob — runs every minute
@@ -116,6 +124,7 @@ This repository contains a comprehensive reference guide for Kubernetes concepts
   ```
 
 * 📘 **Service**
+  
   Provides a stable network endpoint to access Pods. Supports four types: `ClusterIP`, `NodePort`, `LoadBalancer`, and `ExternalName`:
   ```yaml
   apiVersion: v1
@@ -133,6 +142,7 @@ This repository contains a comprehensive reference guide for Kubernetes concepts
   ```
 
 * 📗 **Ingress**
+  
   Single entry point for all external HTTP/HTTPS traffic — routes requests to the correct Service based on hostname:
   ```yaml
   spec:
@@ -151,6 +161,7 @@ This repository contains a comprehensive reference guide for Kubernetes concepts
   ```
 
 * 📙 **ConfigMap & Secret**
+  
   ConfigMap stores non-sensitive configuration. Secret stores sensitive data like passwords and API keys:
   ```yaml
   # ConfigMap
@@ -172,6 +183,7 @@ This repository contains a comprehensive reference guide for Kubernetes concepts
   ```
 
 * 📙 **Volume**
+  
   Persists data beyond the container lifecycle. Containers in the same Pod can share a volume:
   ```yaml
   volumes:
@@ -191,6 +203,7 @@ This repository contains a comprehensive reference guide for Kubernetes concepts
   ```
 
 * 📙 **StatefulSet**
+  
   Manages stateful applications where each Pod needs a stable identity and its own persistent storage:
   ```yaml
   apiVersion: apps/v1
@@ -211,6 +224,7 @@ This repository contains a comprehensive reference guide for Kubernetes concepts
   ```
 
 * 📘 **Computational Resources**
+  
   Defines CPU and memory `requests` (guaranteed) and `limits` (maximum) per container:
   ```yaml
   resources:
@@ -223,6 +237,7 @@ This repository contains a comprehensive reference guide for Kubernetes concepts
   ```
 
 * 📘 **Horizontal Pod Autoscaler**
+  
   Automatically scales the number of Pod replicas based on CPU or memory utilization:
   ```yaml
   apiVersion: autoscaling/v2
