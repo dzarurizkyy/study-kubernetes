@@ -1,4 +1,4 @@
-# ☸️ Kubernetes Notes
+# ☸️ Kubernetes Basics
 
 A comprehensive reference guide for Kubernetes concepts, resources, and kubectl operations.
 
